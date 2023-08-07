@@ -11,12 +11,12 @@ const MultifilesUpload = () => {
     // const [downloadLink1, setDownloadLink1] = useState('');
     // const [downloadLink2, setDownloadLink2] = useState('');
 
-    const handleFile1Change = (event) => {
+    const handleFile1Change = (event: { target: { files: unknown[]; }; }) => {
         const selectedFile = event.target.files[0];
         setFile1(selectedFile);
     };
 
-    const handleFile2Change = (event) => {
+    const handleFile2Change = (event: { target: { files: unknown[]; }; }) => {
         const selectedFile = event.target.files[0];
         setFile2(selectedFile);
     };
