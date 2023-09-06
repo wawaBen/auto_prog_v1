@@ -24,13 +24,13 @@ const MultifilesUpload = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
-        formData.append('files', file1);
-        formData.append('files', file2);
-        const type = "SID208"
+        formData.append('fileSID208_flash', file1);
+        formData.append('fileSID208_EEPROM', file2);
+        // const type = "SID208"
 
 
         try {
-            const response = await axios.post(`${api.url}/upload?type=${type}`, formData, {
+            const response = await axios.post(`${api.url}uploadSID208/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

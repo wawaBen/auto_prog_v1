@@ -22,9 +22,9 @@ export default function BasicModal({ open, handleClose, typeForm }) {
     const Form = () => {
         switch (typeForm) {
             case 'DCU102':
-                return <FileUploadForm />
+                return <FileUploadForm typeForm={typeForm} />
             case 'SID208':
-                return <MultifilesUpload />
+                return <MultifilesUpload typeForm={typeForm} />
             default:
                 return null
         }
