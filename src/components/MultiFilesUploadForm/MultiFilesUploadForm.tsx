@@ -39,7 +39,7 @@ const MultifilesUpload = () => {
             // Enregistrer le fichier côté client
             console.log(response);
             const blob = new Blob([response.data], { type: 'application/zip' });
-            saveAs(blob, 'modified_file.zip');
+            saveAs(blob, 'SID_208_OFF.zip');
         } catch (error) {
             console.error('Une erreur s\'est produite lors de l\'envoi du fichier :', error);
         }

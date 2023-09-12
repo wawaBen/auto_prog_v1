@@ -74,7 +74,7 @@ export default function AuthContextProvider({ children }) {
             } else {
                 // REDIRECTION SI DECONNECTE
                 navigate('/');
-                setUser(null);
+                // setUser(null);
             }
         });
 

@@ -19,6 +19,7 @@ export const Programmation = () => {
             <h1>Programmation</h1>
             <div className='group-button'>
                 <BasicButtons color={"error"} text={"DCU102"} handleOpen={() => handleOpen('DCU102')} />
+                <p></p>
                 <BasicButtons text={"SID208"} handleOpen={() => handleOpen('SID208')} />
             </div>
             <BasicModal open={open} handleClose={handleClose} typeForm={typeForm} />

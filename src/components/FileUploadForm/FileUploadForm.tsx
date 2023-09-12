@@ -13,29 +13,28 @@ const FileUploadForm = ({ typeForm }) => {
         setFile(selectedFile);
     };
 
-
     const handleSubmit = async (event) => {
         event.preventDefault();
+
         const formData = new FormData();
-        formData.append('fileDCU102', file);
-        // const type = "SID208"
+        formData.append("fileDCU102", file);
 
         try {
-            const response = await axios.post(`${api.url}uploadDCU102/IMMOOFF/`, formData, {
+            const response = await axios.post(`${api.url}/uploadDCU102/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             });
 
-            // Enregistrer le fichier côté client
+
+            //   Enregistrer le fichier côté client
             console.log("Response ===> ", response);
-            // const blob = new Blob([response.data], { type: 'application/zip' });
-            // saveAs(blob, 'modified_file.zip');
+            const blob = new Blob([response.data], { type: 'application/zip' });
+            saveAs(blob, 'DCU_ORI_OFF.zip');
         } catch (error) {
             console.error('Une erreur s\'est produite lors de l\'envoi du fichier :', error);
         }
     };
-
 
 
     return (
