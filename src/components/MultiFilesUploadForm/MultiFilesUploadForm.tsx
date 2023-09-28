@@ -30,7 +30,7 @@ const MultifilesUpload = () => {
 
 
         try {
-            const response = await axios.post(`${api.url}uploadSID208/IMMOOFF`, formData, {
+            const response = await axios.post(`${api.url}/uploadSID208/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
