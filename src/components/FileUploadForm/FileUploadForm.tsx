@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 // import { Link } from '@mui/material';
 import { saveAs } from 'file-saver';
-import api from "../../../api.json"
 
 const FileUploadForm = ({ typeForm }) => {
     const [file, setFile] = useState(null);
@@ -20,7 +19,7 @@ const FileUploadForm = ({ typeForm }) => {
         formData.append("fileDCU102", file);
 
         try {
-            const response = await axios.post(`${api.url}/uploadDCU102/IMMOOFF`, formData, {
+            const response = await axios.post(`api/uploadDCU102/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
