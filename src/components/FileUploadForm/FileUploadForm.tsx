@@ -23,14 +23,15 @@ const FileUploadForm = ({ typeForm }) => {
             const response = await axios.post(`${api.url}/uploadDCU102/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
-                }
+                },
+                responseType: 'arraybuffer'
             });
 
 
             //   Enregistrer le fichier côté client
             console.log("Response ===> ", response);
             const blob = new Blob([response.data], { type: 'application/zip' });
-            saveAs(blob, 'DCU_ORI_OFF.zip');
+            saveAs(blob, 'DCU_ORI_OFF');
         } catch (error) {
             console.error('Une erreur s\'est produite lors de l\'envoi du fichier :', error);
         }
