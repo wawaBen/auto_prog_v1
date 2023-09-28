@@ -33,7 +33,8 @@ const MultifilesUpload = () => {
             const response = await axios.post(`${api.url}uploadSID208/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
-                }
+                },
+                responseType: 'arraybuffer'
             });
 
             // Enregistrer le fichier côté client
