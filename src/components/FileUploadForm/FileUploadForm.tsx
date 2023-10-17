@@ -19,7 +19,7 @@ const FileUploadForm = ({ typeForm }) => {
         formData.append("fileDCU102", file);
 
         try {
-            const response = await axios.post(`api/uploadDCU102/IMMOOFF`, formData, {
+            const response = await axios.post(`https://auto-programming-proto.ey.r.appspot.com/uploadDCU102/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

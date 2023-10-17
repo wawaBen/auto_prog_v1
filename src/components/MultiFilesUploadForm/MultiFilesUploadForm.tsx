@@ -29,7 +29,7 @@ const MultifilesUpload = () => {
 
 
         try {
-            const response = await axios.post(`api/uploadSID208/IMMOOFF`, formData, {
+            const response = await axios.post(`https://auto-programming-proto.ey.r.appspot.com/uploadSID208/IMMOOFF`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
